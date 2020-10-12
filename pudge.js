@@ -111,7 +111,7 @@ parentDiv.addEventListener('mousedown', (e) => {
     } else {
         if (targetSrc[targetSrc.length - 1] == 'heal.jpg' && e.target.style.opacity == '1') {
             hit.play();
-            if (health !== 3) {
+            if (health !== 3 && score <= 300) {
                 if (health === 1) {
                     livesArr.push(lives[1]);
                 }

@@ -1,6 +1,16 @@
 @font-face {
     font-family: OptimusPrinceps;
-    src: '/fonts/OptimusPrinceps.ttf';
+    src: url("fonts/OptimusPrinceps.ttf");
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url("fonts/pixel.ttf");
+}
+
+h1 {
+    font-family: Pixel;
+
 }
 
 body {
@@ -54,9 +64,8 @@ span {
 
 p {
     margin: 0;
-    font-family: 'Six Caps', sans-serif;
-    font-size: 50px;
-    letter-spacing: 10px;
+    font-family: Pixel;
+    font-size: 35px;
     color: white;
 }
 
@@ -161,6 +170,7 @@ p {
     font-size: 40px;
     font-family: OptimusPrinceps;
     color: rgb(173, 0, 0);
+    min-width: 300px;
 }
 
 ol {
@@ -171,9 +181,12 @@ ol {
 }
 
 .play {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
     font-size: 60px;
-    font-family: OptimusPrinceps;
-    color: rgb(173, 0, 0);
+    font-family: Pixel;
+    color: white;
     margin-top: 50px;
     display: flex;
     justify-content: center;
