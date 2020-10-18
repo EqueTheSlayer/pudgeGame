@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="pudge.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>

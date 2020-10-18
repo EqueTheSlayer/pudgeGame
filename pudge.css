@@ -169,7 +169,7 @@ p {
 .row {
     font-size: 40px;
     font-family: OptimusPrinceps;
-    color: rgb(173, 0, 0);
+    color: grey;
     min-width: 300px;
 }
 
@@ -192,4 +192,8 @@ ol {
     justify-content: center;
     background: black;
     text-decoration: none;
+}
+
+.you {
+    color: rgb(173, 0, 0);
 }

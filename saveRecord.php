@@ -9,7 +9,6 @@ $result = mysqli_query($GLOBALS['connection'], "SELECT * FROM `leaderboard` WHER
 $isRecord = mysqli_fetch_assoc($result);
 if ($isRecord) {
     if ($isRecord['score'] * 1 < $score) {
-        //не заходит в условие
         $stmt = $dbh->prepare("UPDATE `leaderboard` SET `score`=:score, `date`=:date WHERE `name`=:name");
         $stmt->bindParam(":name", $name);
         $stmt->bindParam(":score", $score);
