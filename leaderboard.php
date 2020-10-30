@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Ban the bucha</title>
-    <link rel="stylesheet" href="../../../Users/o_orl/PhpstormProjects/pudge.css"/>
+    <link rel="stylesheet" href="pudge.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
     <script src="main.js"></script>
