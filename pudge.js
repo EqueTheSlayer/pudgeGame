@@ -11,8 +11,6 @@ const danceBot = document.querySelector('#danceBot');
 const death = document.querySelector('#died');
 const dancingPudge = document.querySelectorAll('.dancingPudge');
 const deathScore = document.querySelector('span');
-const leaderboard = document.querySelector('.leaderboard');
-const objName = {};
 const missed = new Audio();
 const hit = new Audio();
 const boom = new Audio();
@@ -31,18 +29,6 @@ let health = 3;
 let randomPudge = pudgeses[Math.floor((Math.random() * 25))];
 let pudge = 0;
 let screenWidth = document.documentElement.clientWidth - 50;
-
-if (localStorage.getItem('name')) {
-    objName.name = localStorage.getItem('name');
-} else {
-    objName.name = prompt("What's your name?");
-    if(objName.name.length == 0) {
-        objName.name === 'guest';
-
-    } else {
-        localStorage.setItem('name', `${objName.name}`);
-    }
-}
 
 dancingPudge.forEach(pudge => {
     pudge.style.width = `${screenWidth / 10}px`;
@@ -174,21 +160,7 @@ function gameOver() {
         gameEnds.style.visibility = 'visible';
         death.style.opacity = '1';
         ok.style.opacity = '1';
-        leaderboard.style.opacity = '1';
         deathSouls.src = 'sounds/deathsouls.mp3';
         deathSouls.play();
-        $.ajax({
-            type: "POST",
-            data: {'name': objName.name, 'score': score},
-            url: "http://178.155.72.51/banPudge/saveRecord.php",
-            dataType: 'html',
-            success: function (data) {
-                console.log(data);
-            }
-        })
     }
 }
-
-console.log('Денис дурак неумный');
-
-
